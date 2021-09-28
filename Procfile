@@ -1,2 +1,2 @@
-web:gunicorn ProductManage.wsgi --log-file -
+web: gunicorn ProductManage.wsgi --log-file -
 
