@@ -89,22 +89,18 @@ WSGI_APPLICATION = 'ProductManage.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'warehouse_manager',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '3306',
-        "OPTIONS": {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES', innodb_strict_mode=1",
-            'charset': 'utf8mb4',
-            "autocommit": True,
-        }
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dbbih4qviaur7s',
+        'USER': 'atwqawxfaptjek',
+        'PASSWORD': 'd38a949e62853cc7aa53daf46ff69aa2ca430f87b0499b9c4f5dc5815172d8af',
+        'HOST': 'ec2-100-24-169-249.compute-1.amazonaws.com',
+        'PORT': '5432',
+
     }
 }
 
-prod_db = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(prod_db)
+# prod_db = dj_database_url.config(conn_max_age=500)
+# DATABASES['default'].update(prod_db)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
