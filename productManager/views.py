@@ -24,6 +24,10 @@ from rest_framework import status
 @api_view(['GET', 'POST'])
 def product(request):
 
+    # p = PUser(name='ikeoluwa', email='ike@gmail.com', password='Excellen*1')
+    # p.save()
+    # print(p)
+
     if request.method == "GET":
         products = Product.objects.all()
         serializer = ProductSerializer(products, many=True)
