@@ -87,6 +87,19 @@ WSGI_APPLICATION = 'ProductManage.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'warehouse_manager',
+#         'USER': 'root',
+#         'PASSWORD': '',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+
+#     }
+# }
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -157,7 +170,8 @@ REST_FRAMEWORK = {
 
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",
-    "http://localhost:3000"
+    "http://localhost:3000",
+    "https://warehouseui.netlify.app"
 ]
 
 

@@ -61,7 +61,8 @@ class ProductMovements(models.Model):
         Product, on_delete=models.CASCADE, related_name='movelocation', null=True, blank=True)
     from_location = models.CharField(max_length=100, null=True, blank=True)
     to_location = models.CharField(max_length=100, null=True, blank=True)
-    qty_to_be_moved = models.IntegerField()
+    qty_to_be_moved = models.IntegerField(null=True, blank=True)
+
     status = models.IntegerField(null=True, blank=True)
     created_at = models.DateTimeField(default=now)
     updated_at = models.DateTimeField(default=now)
